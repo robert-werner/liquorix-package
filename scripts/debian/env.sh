@@ -122,5 +122,5 @@ function build_source_package {
         dpkg-source --commit . ci.patch
 
     echo "[INFO ] Making source package"
-    $schedtool dpkg-buildpackage --build=source
+    $schedtool dpkg-buildpackage -uc -us -j30 --build=source
 }
